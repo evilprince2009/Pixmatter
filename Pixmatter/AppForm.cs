@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace Pixmatter
 {
-    public partial class AppForm : Form
+    public partial class AppForm : MetroForm
     {
         public AppForm()
         {
             InitializeComponent();
         }
-
     }
 }
