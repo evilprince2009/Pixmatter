@@ -75,6 +75,7 @@
             this.format_Box.Size = new System.Drawing.Size(103, 23);
             this.format_Box.TabIndex = 2;
             this.format_Box.Text = "Choose Format";
+            this.format_Box.SelectedIndexChanged += new System.EventHandler(this.format_Box_SelectedIndexChanged);
             // 
             // btn_Convert
             // 

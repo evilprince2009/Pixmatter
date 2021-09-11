@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using MetroFramework.Forms;
 using System.IO;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace Pixmatter
     public partial class AppForm : MetroForm
     {
         private string _imagePath;
+        private string _imageFormat;
         public AppForm()
         {
             InitializeComponent();
@@ -43,6 +45,51 @@ namespace Pixmatter
                     pictureBox.ImageLocation = filePicker.FileName;
                     _imagePath = filePicker.FileName;
                 }
+            }
+        }
+
+        private void ConvertImage(string format)
+        {
+            try
+            {
+                Image image = Image.FromFile(_imagePath);
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        private void format_Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (format_Box.SelectedIndex)
+            {
+                case 0:
+                    _imageFormat = "jpeg";
+                    break;
+                case 1:
+                    _imageFormat = "png";
+                    break;
+                case 2:
+                    _imageFormat = "tiff";
+                    break;
+                case 3:
+                    _imageFormat = "bmp";
+                    break;
+                case 4:
+                    _imageFormat = "ico";
+                    break;
+                case 5:
+                    _imageFormat = "emf";
+                    break;
+                case 6:
+                    _imageFormat = "wmf";
+                    break;
+                default:
+                    _imageFormat = null;
+                    break;
             }
         }
     }
