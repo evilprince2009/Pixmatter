@@ -45,6 +45,7 @@
             this.pictureBox.Size = new System.Drawing.Size(409, 262);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
+            this.pictureBox.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
             // 
             // label1
             // 

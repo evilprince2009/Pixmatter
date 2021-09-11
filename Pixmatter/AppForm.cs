@@ -7,6 +7,7 @@ namespace Pixmatter
 {
     public partial class AppForm : MetroForm
     {
+        private string _imagePath;
         public AppForm()
         {
             InitializeComponent();
@@ -31,6 +32,18 @@ namespace Pixmatter
         private void btn_Convert_Click(object sender, EventArgs e)
         {
             CheckDestination();
+        }
+
+        private void pictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            using (OpenFileDialog filePicker = new OpenFileDialog())
+            {
+                if (filePicker.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.ImageLocation = filePicker.FileName;
+                    _imagePath = filePicker.FileName;
+                }
+            }
         }
     }
 }
