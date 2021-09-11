@@ -43,6 +43,7 @@
             this.pictureBox.Location = new System.Drawing.Point(28, 73);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(409, 262);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
@@ -52,11 +53,11 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(23, 61);
+            this.label1.Location = new System.Drawing.Point(22, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 21);
+            this.label1.Size = new System.Drawing.Size(302, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Double click the box to select image";
+            this.label1.Text = "Double click inside the box to select image";
             // 
             // format_Box
             // 
