@@ -34,9 +34,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(786, 485);
+            this.MaximizeBox = false;
             this.Name = "AppForm";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Pixmatter";
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.ResumeLayout(false);
 
         }
