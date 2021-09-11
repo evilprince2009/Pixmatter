@@ -10,22 +10,27 @@ namespace Pixmatter
         public AppForm()
         {
             InitializeComponent();
-            // CheckDestination();
         }
 
         private void CheckDestination()
         {
-            if (!Directory.Exists(outDirectory.Text))
+            string directory = outDirectory.Text;
+            if (!Directory.Exists(directory))
             {
                 try
                 {
-                    Directory.CreateDirectory(outDirectory.Text);
+                    Directory.CreateDirectory(directory);
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Path doesn't exist. Couldn't create a directory for  you","Oops !", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Path doesn't exist. Couldn't create a directory for  you", "Oops !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btn_Convert_Click(object sender, EventArgs e)
+        {
+            CheckDestination();
         }
     }
 }

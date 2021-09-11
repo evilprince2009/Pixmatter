@@ -71,7 +71,7 @@
             "wmf"});
             this.format_Box.Location = new System.Drawing.Point(28, 342);
             this.format_Box.Name = "format_Box";
-            this.format_Box.Size = new System.Drawing.Size(100, 23);
+            this.format_Box.Size = new System.Drawing.Size(103, 23);
             this.format_Box.TabIndex = 2;
             this.format_Box.Text = "Choose Format";
             // 
@@ -84,6 +84,7 @@
             this.btn_Convert.TabIndex = 3;
             this.btn_Convert.Text = "Convert";
             this.btn_Convert.UseVisualStyleBackColor = true;
+            this.btn_Convert.Click += new System.EventHandler(this.btn_Convert_Click);
             // 
             // outDirectory
             // 
@@ -97,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 416);
+            this.ClientSize = new System.Drawing.Size(465, 420);
             this.Controls.Add(this.outDirectory);
             this.Controls.Add(this.btn_Convert);
             this.Controls.Add(this.format_Box);
