@@ -1,11 +1,9 @@
 ## _Pixmatter_
 
-_**Pixmatter**_ is a Image format converter application written in C#.
-
 ### Overview
 
 ![pixmatter](https://github.com/evilprince2009/Pixmatter/blob/main/images/Screenshot_1.png)
-Pixmatter is a .NET application that converts any image to required format.
+_**Pixmatter**_ is a .NET application that converts any image to required format.
 
 ### Supported Formats
 
