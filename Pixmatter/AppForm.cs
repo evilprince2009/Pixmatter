@@ -19,7 +19,7 @@ namespace Pixmatter
 
         private void CheckDestination()
         {
-            _directory = outDirectory.Text;
+            _directory = OutDirectory.Text;
             if (!Directory.Exists(_directory))
             {
                 try
@@ -30,30 +30,6 @@ namespace Pixmatter
                 {
                     MessageBox.Show("Path doesn't exist. Couldn't create a directory for  you", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } 
-            }
-        }
-
-        private void btn_Convert_Click(object sender, EventArgs e)
-        {
-           
-            if (_imagePath != null)
-            {
-                CheckDestination();
-                ConvertImage(_imageFormat);
-            }
-            else
-            {
-                MessageBox.Show("No image selected for conversion." , "Hang On", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void pictureBox_DoubleClick(object sender, EventArgs e)
-        {
-            using OpenFileDialog filePicker = new();
-            if (filePicker.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox.ImageLocation = filePicker.FileName;
-                _imagePath = filePicker.FileName;
             }
         }
 
@@ -132,9 +108,19 @@ namespace Pixmatter
             MessageBox.Show("Image converted successfully.\n Saved to " + _directory, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void format_Box_SelectedIndexChanged(object sender, EventArgs e)
+        private void PictureBox_DoubleClick(object sender, EventArgs e)
         {
-            _imageFormat = format_Box.SelectedIndex switch
+            using OpenFileDialog filePicker = new();
+            if (filePicker.ShowDialog() == DialogResult.OK)
+            {
+                PictureBox.ImageLocation = filePicker.FileName;
+                _imagePath = filePicker.FileName;
+            }
+        }
+
+        private void FormatBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _imageFormat = FormatBox.SelectedIndex switch
             {
                 0 => "jpeg",
                 1 => "png",
@@ -146,6 +132,19 @@ namespace Pixmatter
                 7 => "gif",
                 _ => null
             };
+        }
+
+        private void ButtonConvert_Click(object sender, EventArgs e)
+        {
+            if (_imagePath != null)
+            {
+                CheckDestination();
+                ConvertImage(_imageFormat);
+            }
+            else
+            {
+                MessageBox.Show("No image selected for conversion.", "Hang On", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
