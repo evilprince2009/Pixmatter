@@ -117,19 +117,19 @@ namespace Pixmatter
                     }
                     else
                     {
-                        MessageBox.Show("Select a format to proceed.", "Invalid operation !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Select a format to proceed.", "Invalid Operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Something unusual happened.", "Hang on !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something unusual happened.", "Hang On", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void SuccessMessage()
         {
-            MessageBox.Show("Image converted successfully.\n Saved to " + _directory, "Success !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Image converted successfully.\n Saved to " + _directory, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void format_Box_SelectedIndexChanged(object sender, EventArgs e)
