@@ -20,3 +20,9 @@ Formats are:-
 - WMF (.wmf)
 
 For example you can convert a JPEG image to PNG format using _**Pixmatter**_.
+
+### Making _**Pixmatter**_ Up and Running
+
+- Download _**Pixmatter**_ Source Code.
+- Load _**Pixmatter**_ in Visual Studio by clicking on _**Pixmatter.sln**_ and run the project by hitting `Ctrl+F5` key.
+- Alternatively you can run the project from command line. Navigate to the directory `.\Pixmatter\Pixmatter` in command line and run the project by running `dotnet run` command.
