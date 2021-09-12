@@ -28,7 +28,7 @@ namespace Pixmatter
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Path doesn't exist. Couldn't create a directory for  you", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Path doesn't exist. Couldn't create one for you", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 } 
             }
         }
@@ -105,7 +105,7 @@ namespace Pixmatter
 
         private void SuccessMessage()
         {
-            MessageBox.Show("Image converted successfully.\n Saved to " + _directory, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Image converted successfully.\n Saved to: " + _directory, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void PictureBox_DoubleClick(object sender, EventArgs e)
