@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
             this.PictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FormatBox = new System.Windows.Forms.ComboBox();
@@ -108,6 +109,7 @@
             this.Controls.Add(this.FormatBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PictureBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AppForm";
             this.Resizable = false;
